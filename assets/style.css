@@ -1,0 +1,25 @@
+body {
+    background-color:black;
+}
+
+h1 {
+    color: whitesmoke;
+    border: whitesmoke;
+    border-style: double;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    height: 75px;
+    align-content: space-around;
+    font-family: monospace;
+}
+
+div p {
+    color:whitesmoke;
+    border: ghostwhite;
+    border-style: ridge;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: monospace;
+}
