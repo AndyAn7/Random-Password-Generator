@@ -12,6 +12,7 @@ h1 {
     height: 75px;
     align-content: space-around;
     font-family: monospace;
+    font-size: 65px;
 }
 
 div p {
@@ -22,4 +23,11 @@ div p {
     flex-wrap: wrap;
     justify-content: space-evenly;
     font-family: monospace;
+    font-size: 35px;
+    height: 450px;
+}
+
+#title {
+    color: whitesmoke;
+    font-size: 55px;
 }
