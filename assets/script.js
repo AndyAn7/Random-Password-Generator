@@ -44,16 +44,24 @@ function writePassword() {
   }
 console.log(upperCasemagicIndex)
   if ( sLet ) {
-    
-    passwordArray[1] = lowerCase[1]
+
+    var lowerCasemagicIndex = Math.floor((Math.random() * lowerCase.length -1))
+
+    passwordArray[1] = lowerCase[lowerCasemagicIndex]
   }
 
   if ( speshChar ) {
-    passwordArray[2] = special[2]
+
+    var specialmagicIndex = Math.floor((Math.random() * special.length -1))
+
+    passwordArray[2] = special[specialmagicIndex]
   }
 
   if ( intChar ) {
-    passwordArray[3] = intSelection[3]
+
+    var intSelectionmagicIndex = Math.floor((Math.random() * intSelection.length -1))
+
+    passwordArray[3] = intSelection[intSelectionmagicIndex]
   }
 
   var printPassword = passwordArray.join("")
