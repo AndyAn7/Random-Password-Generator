@@ -26,16 +26,25 @@ function writePassword() {
   var intSelection = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
   var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"]
+ 
+  var totalConcat = upperCase.concat(lowerCase.concat(intSelection.concat(special)))
 
   var passwordArray = [];
   for(var i = 0; i < length; i++) {
-    passwordArray.push("a");
+
+  var totalConcatmagicIndex = Math.floor((Math.random() * totalConcat.length - 1))
+
+  passwordArray.push(totalConcat[totalConcatmagicIndex]);
 }
   if ( bLet ) {
-    passwordArray[0] = upperCase[0]
-  }
 
+    var upperCasemagicIndex = Math.floor((Math.random() * upperCase.length -1))
+
+    passwordArray[0] = upperCase[upperCasemagicIndex]
+  }
+console.log(upperCasemagicIndex)
   if ( sLet ) {
+    
     passwordArray[1] = lowerCase[1]
   }
 
@@ -47,12 +56,9 @@ function writePassword() {
     passwordArray[3] = intSelection[3]
   }
 
+  var printPassword = passwordArray.join("")
   var el = document.getElementById("password") 
-  el.innerHTML = passwordArray
-
-
-console.log(passwordArray)
-  passwordText.value = password;
+  el.innerHTML = printPassword
 
 }
 
