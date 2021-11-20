@@ -50,12 +50,14 @@ function writePassword() {
     passwordArray[0] = upperCase[upperCasemagicIndex]
   }
   console.log(upperCasemagicIndex)
+  
   if ( sLet ) {
 
     var lowerCasemagicIndex = Math.floor((Math.random() * lowerCase.length -1))
 
     passwordArray[1] = lowerCase[lowerCasemagicIndex]
   }
+  console.log(lowerCasemagicIndex)
 
   if ( speshChar ) {
 
@@ -63,6 +65,7 @@ function writePassword() {
 
     passwordArray[2] = special[specialmagicIndex]
   }
+  console.log(specialmagicIndex)
 
   if ( intChar ) {
 
@@ -70,6 +73,7 @@ function writePassword() {
 
     passwordArray[3] = intSelection[intSelectionmagicIndex]
   }
+  console.log(intSelectionmagicIndex)
 
   // Final process of execution prior to printing of password (passwordArray.join), location of password to print at HTML identifier, and the printing of said password within the DOM
   var printPassword = passwordArray.join("")
