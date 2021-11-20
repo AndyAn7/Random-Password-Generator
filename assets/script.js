@@ -49,7 +49,7 @@ function writePassword() {
 
     passwordArray[0] = upperCase[upperCasemagicIndex]
   }
-console.log(upperCasemagicIndex)
+  console.log(upperCasemagicIndex)
   if ( sLet ) {
 
     var lowerCasemagicIndex = Math.floor((Math.random() * lowerCase.length -1))
