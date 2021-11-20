@@ -7,6 +7,6 @@ This generator utilizes a while loop to determine the length of characters provi
 
 [urlGithubRepo](https://github.com/AndyAn7/homeWork3)
 
-![image](assets\preLimSS.png)
+![image](assets/img/preLimSS.png)
 
-![image](assets\postSS.png)
+![image](assets/img/postSS.png)
