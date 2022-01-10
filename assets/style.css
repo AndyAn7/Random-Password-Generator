@@ -135,3 +135,38 @@ button[disabled] {
     font-size: 0.8rem;
   }
 }
+
+/* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  display: grid;
+  place-items:center;
+  height: 100vh;
+}
+
+.password-wrapper {
+  padding:15px;
+  box-shadow: 2px 3px 10px black;
+  border-radius:10px;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 12px 0px 12px 5px;
+  border: 1px solid white;
+  border-radius: 4px;
+  margin: 10px 0px;
+}
+.password-wrapper button {
+  background-color: grey;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}*/

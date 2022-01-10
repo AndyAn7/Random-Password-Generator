@@ -1,13 +1,8 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+function generatePassword() {
   
-  // var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  
-  // Criterion for length of character output random password generator whereas a number between 8-128 input by user
+// Criterion for length of character output random password generator whereas a number between 8-128 input by user
   var length = 0 
   while ( length < 8 || length > 128 || typeof length !== 'number' || !length ) {
 
@@ -16,7 +11,6 @@ function writePassword() {
     length = parseInt(length);
     console.log(length);
       }
-    
   // Confirmation prompt(s) asking/determining characters to be used via user preference
   var bLet = confirm("Would you like to include capital letters?")
   var sLet = confirm("Would you like to include lowercase letters?")
@@ -30,57 +24,71 @@ function writePassword() {
 
   var intSelection = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-  var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"]
- 
-  // Concatenation of array(s) totality
-  var totalConcat = upperCase.concat(lowerCase.concat(intSelection.concat(special)))
+  var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"];
 
   // Conditionals that represent output of random characters that are determined by user input during prompt(s) portion of program; total of arrays, upperCase, lowerCase, special, and integer characters
   var passwordArray = [];
-  for(var i = 0; i < length; i++) {
-
-  var totalConcatmagicIndex = Math.floor((Math.random() * totalConcat.length - 1))
-
-  passwordArray.push(totalConcat[totalConcatmagicIndex]);
-}
+ 
   if ( bLet ) {
 
-    var upperCasemagicIndex = Math.floor((Math.random() * upperCase.length -1))
+    for(var i = 0; i < upperCase.length; i++) {
 
-    passwordArray[0] = upperCase[upperCasemagicIndex]
+      passwordArray.push(upperCase[i]);
+
+    }
+    console.log(passwordArray)
   }
-  console.log(upperCasemagicIndex)
-  
   if ( sLet ) {
 
-    var lowerCasemagicIndex = Math.floor((Math.random() * lowerCase.length -1))
+    for(var i = 0; i < lowerCase.length; i++) {
 
-    passwordArray[1] = lowerCase[lowerCasemagicIndex]
+      passwordArray.push(lowerCase[i]);
+
+    }
+    console.log(passwordArray)
   }
-  console.log(lowerCasemagicIndex)
-
   if ( speshChar ) {
 
-    var specialmagicIndex = Math.floor((Math.random() * special.length -1))
+    for(var i = 0; i < special.length; i++) {
 
-    passwordArray[2] = special[specialmagicIndex]
+      passwordArray.push(special[i]);
+
+    }
+    console.log(passwordArray)
   }
-  console.log(specialmagicIndex)
-
   if ( intChar ) {
 
-    var intSelectionmagicIndex = Math.floor((Math.random() * intSelection.length -1))
+    for(var i = 0; i < intSelection.length; i++) {
 
-    passwordArray[3] = intSelection[intSelectionmagicIndex]
+      passwordArray.push(intSelection[i]);
+
+    }
+    console.log(passwordArray)
   }
-  console.log(intSelectionmagicIndex)
 
-  // Final process of execution prior to printing of password (passwordArray.join), location of password to print at HTML identifier, and the printing of said password within the DOM
-  var printPassword = passwordArray.join("")
-  var el = document.getElementById("password") 
-  el.innerHTML = printPassword
+  var passwordString = "";
 
-}
+  //Loop iterates password
+  for (i = 0; i < length; i++) {
+    var random = Math.floor(Math.random() * passwordArray.length);
+    console.log(random, passwordArray[random]);
+    passwordString = (passwordString + passwordArray[random]);
+    console.log(passwordString);
+  }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+  return passwordString;
+}  
+ 
+var generateBtn = document.querySelector("#generate");
+
+  // Write password to the #password input
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+  
+    passwordText.value = password;
+  
+  }
+  
+  // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
