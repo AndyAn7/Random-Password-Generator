@@ -19,3 +19,6 @@ MIT
 ![image](assets/img/preLimSS.png)
 
 ![image](assets/img/postSS.png)
+
+## [Contact](Contact)
+andyan7@gmail.com
