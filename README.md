@@ -9,6 +9,9 @@ This generator utilizes a while loop to determine the length of characters provi
 - CSS
 - JS
 
+## [License](License)
+MIT
+
 [deployedApplication](https://andyan7.github.io/Random-Password-Generator/)
 
 [urlGithubRepo](https://github.com/AndyAn7/random-password-generator)
